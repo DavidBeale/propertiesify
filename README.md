@@ -6,7 +6,7 @@ Enables .property files to be required into a module as a JS object hash. Useful
 ## Installation
 With [`npm`](http://npmjs.org/) as a development dependency
 ```shell
-npm install propertiesify ---save-dev
+npm install propertiesify --save-dev
 ```
 
 ## Configuration
