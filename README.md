@@ -12,9 +12,10 @@ npm install propertiesify --save-dev
 
 ## Configuration
 
-```js
+propertiesify uses [properties])(https://www.npmjs.com/package/properties) and supports the same ```options``` object.
 
-```
+All properties are supported, apart from ```path``` which will be ignored.
+
 ## Usage
 
 in ```example/locales/en_US.properties```
