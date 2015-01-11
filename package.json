@@ -1,7 +1,7 @@
 {
   "name": "propertiesify",
   "description": "A Browserify transform which allows .properties files to be required.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "lib/propertiesify.js",
   "homepage": "https://github.com/bealearts/propertiesify",
   "author": {
