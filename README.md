@@ -1,4 +1,4 @@
-propertiesify [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](https://travis-ci.org/bealearts/propertiesify.svg)](https://travis-ci.org/bealearts/propertiesify) [![npm version](https://badge.fury.io/js/grunt-propertiesify.svg)](http://badge.fury.io/js/grunt-propertiesify)
+propertiesify [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](https://travis-ci.org/bealearts/propertiesify.svg)](https://travis-ci.org/bealearts/propertiesify) [![npm version](https://badge.fury.io/js/propertiesify.svg)](http://badge.fury.io/js/propertiesify)
 =============
 A [Browserify](https://github.com/substack/node-browserify) transform which allows .properties files to be required.
 
