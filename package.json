@@ -1,6 +1,6 @@
 {
   "name": "propertiesify",
-  "description": "A Browserify transform which allows .property files to be required.",
+  "description": "A Browserify transform which allows .properties files to be required.",
   "version": "0.0.0",
   "main": "lib/propertiesify.js",
   "homepage": "https://github.com/bealearts/propertiesify",
@@ -32,6 +32,7 @@
     "through2": "^0.6.3"
   },
   "devDependencies": {
+    "browserify": "^8.1.0",
     "concat-stream": "^1.4.7",
     "grunt": "^0.4.0",
     "grunt-contrib-clean": "^0.6.0",

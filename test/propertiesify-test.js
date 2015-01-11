@@ -4,6 +4,7 @@
 var propertiesify = require('../lib/propertiesify');
 var fs = require('fs');
 var concat = require('concat-stream');
+var browserify = require('browserify');
 
 
 exports.propertiesify = {
@@ -15,7 +16,7 @@ exports.propertiesify = {
 		fs.createReadStream(file)
       		.pipe(propertiesify(file))
       		.pipe(concat({encoding: 'string'}, function(result){
-      			test.equal(result, 'module.exports = {"KEY":"VALUE"};\n');
+      			test.equal(result, 'module.exports = {"KEY":"value"};\n');
 
       			test.done();
       		}));
@@ -28,7 +29,7 @@ exports.propertiesify = {
 		fs.createReadStream(file)
       		.pipe(propertiesify(file, {sections: true}))
       		.pipe(concat({encoding: 'string'}, function(result){
-      			test.equal(result, 'module.exports = {"KEY":"VALUE"};\n');
+      			test.equal(result, 'module.exports = {"KEY":"value"};\n');
 
       			test.done();
       		}));
@@ -41,9 +42,25 @@ exports.propertiesify = {
 		fs.createReadStream(file)
       		.pipe(propertiesify(file, {path: true}))
       		.pipe(concat({encoding: 'string'}, function(result){
-      			test.equal(result, 'module.exports = {"KEY":"VALUE"};\n');
+      			test.equal(result, 'module.exports = {"KEY":"value"};\n');
 
       			test.done();
       		}));
-	}	
+	},
+
+	browserify: function(test) {
+
+		if (!fs.existsSync('temp'))
+		{
+			fs.mkdirSync('temp');
+		}
+
+		var b = browserify('./test/artifacts/main.js');
+		b.transform('./lib/propertiesify');
+
+		b.bundle().pipe(fs.createWriteStream('temp/bundle.js')).on('finish', function(){
+			test.done();
+		});
+
+	}
 };
