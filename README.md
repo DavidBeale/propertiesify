@@ -27,10 +27,7 @@ in ```example/main.js```
 ```js
 var resources = require('./locals/en_US.properties');
 
-module.exports = function()
-{
-	console.log(resources.TITLE);
-};
+console.log(resources.TITLE);	// Outputs: 'Example App'
 ```
 
 ### Transform with the API
